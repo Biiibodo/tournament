@@ -29,6 +29,10 @@ router.post('/login',indexController.processLoginPage);
 
 router.get('/logout',indexController.performLogout);
 
+/* About us page    */
+router.get('/group', function(req, res, next){
+    res.render('group', {title: 'Services'});
 
+});
 
 module.exports = router;
