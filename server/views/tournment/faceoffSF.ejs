@@ -1,0 +1,29 @@
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/main_nav.ejs %>
+<h1 style="text-align: center"><%= title %></h1>
+
+<form form class="form" method="POST" style="text-align: center">
+    <p>Select Winner</p>
+    <input type="radio" id="Winner1" name="Winner1" value="<%= Winner1 %>">
+    <label for="Winner1"><%= Winner1 %></label><br>
+    <input type="radio" id="Winner2" name="Winner1" value="<%= Winner2 %>">
+    <label for="Winner2"><%= Winner2 %></label><br><br>
+
+    <input type="radio" id="Winner3" name="Winner2" value="<%= Winner3 %>">
+    <label for="Winner3"><%= Winner3 %></label><br>
+    <input type="radio" id="Winner4" name="Winner2" value="<%= Winner4 %>">
+    <label for="Winner4"><%= Winner4 %></label><br><br>
+    
+    <button class="btn btn-primary" type="submit">
+        <i class="fas fa-edit">Next</i>
+    </button>    
+</form>
+<%- include ../partials/bottom_nav.ejs %>  
+
+<%- include ../partials/footer.ejs %>
+  
+
+
+
+

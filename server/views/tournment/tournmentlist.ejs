@@ -1,0 +1,61 @@
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/main_nav.ejs %>
+<body style="background-color:rgb(179, 218, 205)">
+<main class="container">
+    <div class="row">
+        <div class="offset-md-2 col-md-10">
+            <h1><%= title %></h1>
+
+
+                <a href="/tournmentlist/add" class="btn btn-primary" role="button">
+                    <i class="fas fa-plus-circle"></i> Add Coffee</a>
+
+            <br>
+            <table class="table table-bordered table-striped table-hover">
+                <tr class="d-flex">
+                    <% if(typeof displayName == 'string' && displayName) { %>
+                        <th class="text-center col-2">Name</th>
+                        <th class="text-center col-2">Winner</th>
+                        <th class="text-center col-4">Players</th>
+                        <th class="text-center col-1"></th>
+                        <th class="text-center col-1"></th>
+                    <% } else{ %>
+                        <th class="text-center col-2">Name</th>
+                        <th class="text-center col-2">Winner</th>
+                        <th class="text-center col-6">Players</th>
+                    <% } %>
+                </tr>
+
+
+                <% for(let count = 0; count < TournmentList.length; count++) { %>
+                    <tr class="d-flex">
+                        <% if(typeof displayName == 'string' && displayName) { %>
+                            <td class="text-center col-2"><%= TournmentList[count].name %></td>
+                            <td class="text-center col-2"><%= TournmentList[count].winner %></td>
+                            <td class="text-center col-4"><%= TournmentList[count].player1 %></td>
+                            <td class="text-center col-1">
+                                <a href="/coffee-list/edit/<%= TournmentList[count]._id %>" class="btn btn-primary">
+                                <i class="fas fa-pencil-alt"></i> Edit</a>
+
+                            </td>
+                            <td class="text-center col-1">
+                                <a href="/coffee-list/delete/<%= CoffeeList[count]._id %>" class="btn btn-danger">
+                                    <i class="fas fa-trash-alt"></i> Delete</a>
+                            </td>
+                        <% } else {%>
+                            <td class="text-center col-2"><%= TournmentList[count].name %></td>
+                            <td class="text-center col-2"><%= TournmentList[count].winner %></td>
+                            <% } %>
+                    </tr>
+                <% } %>
+            </table>
+        </div>
+    </div>
+  </main>
+</body>
+<%- include ../partials/bottom_nav.ejs %>  
+
+<%- include ../partials/footer.ejs %>
+
+  

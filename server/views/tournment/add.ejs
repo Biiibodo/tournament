@@ -1,0 +1,50 @@
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/main_nav.ejs %>
+  
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6"></div>
+        <h1><%= title %></h1>
+
+        <form class="form" method="POST">
+            <div class="class-group">
+                <label for="typeTextField">Name</label>
+                <input type="text" class="form-control"
+                id="typeTextField"
+                placeholder="Name Of Tournment"
+                name="name"
+                 required>
+            </div>
+            <div class="class-group">
+                <label for="typeTextField">Description</label>
+                <input type="text" class="form-control"
+                id="descriptionTextField"
+                placeholder="Description"
+                name="description"
+                >
+            </div>
+            <select class="form-select" aria-label="Default select example" name="numPlayers">
+                <option selected>Number Of Players</option>
+                <option value="8">8</option>
+                <option value="16">16</option>
+              </select>
+
+            <button class="btn btn-primary" type="submit">
+                <i class="fas fa-edit">Next</i>
+            </button>
+
+            <a href="/" class="btn btn-warning">
+                <i class="fas fa-undo"></i> Cancel</a>
+        </form>
+    </div>
+</div>
+  
+<%- include ../partials/bottom_nav.ejs %>  
+
+<%- include ../partials/footer.ejs %>
+  
+
+
+
+

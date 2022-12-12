@@ -1,0 +1,84 @@
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/main_nav.ejs %>
+  
+<div class="container">
+  <div class="row">
+      <div class="offset-md-3 col-md-6"></div>
+      <h1><%= title %></h1>
+
+      <form class="form" method="POST">
+          <div class="class-group">
+              <label for="typeTextField">Player 1</label>
+              <input type="text" class="form-control"
+              id="player1TextField"
+              name="player1"
+               required>
+          </div>
+          <div class="class-group">
+            <label for="typeTextField">Player 2</label>
+            <input type="text" class="form-control"
+            id="player2TextField"
+            name="player2"
+             required>
+          </div>
+          <div class="class-group">
+            <label for="typeTextField">Player 3</label>
+            <input type="text" class="form-control"
+            id="player3TextField"
+            name="player3"
+             required>
+          </div>
+          <div class="class-group">
+          <label for="typeTextField">Player 4</label>
+          <input type="text" class="form-control"
+          id="player4TextField"
+          name="player4"
+           required>
+          </div>
+          <label for="typeTextField">Player 5</label>
+          <input type="text" class="form-control"
+          id="player5TextField"
+          name="player5"
+           required>
+          </div>
+          <div class="class-group">
+            <label for="typeTextField">Player 6</label>
+            <input type="text" class="form-control"
+            id="player6TextField"
+            name="player6"
+            required>
+          </div>
+          <div class="class-group">
+            <label for="typeTextField">Player 7</label>
+            <input type="text" class="form-control"
+            id="player7TextField"
+            name="player7"
+            required>
+          </div>
+          <div class="class-group">
+          <label for="typeTextField">Player 8</label>
+          <input type="text" class="form-control"
+          id="player8TextField"
+          name="player8"
+          required>
+          </div>
+
+          <button class="btn btn-primary" type="submit">
+              <i class="fas fa-edit">Next</i>
+          </button>
+
+          <a href="/" class="btn btn-warning">
+              <i class="fas fa-undo"></i> Cancel</a>
+      </form>
+  </div>
+</div>
+  
+<%- include ../partials/bottom_nav.ejs %>  
+
+<%- include ../partials/footer.ejs %>
+  
+
+
+
+
